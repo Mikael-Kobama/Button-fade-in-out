@@ -1,0 +1,93 @@
+/* Reseta a margem e o padding de todos os elementos */
+* {
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
+  }
+  
+  /* Define a altura e largura do html e body */
+  html,
+  body {
+    height: 200vh; /* Altura total da página é o dobro da altura da viewport */
+    width: 100%; /* Largura total da página */
+    background: black; /* Cor de fundo preta */
+  }
+  
+  /* Estilo para o contêiner principal */
+  .container {
+    display: flex; /* Utiliza flexbox para layout */
+    flex-direction: column; /* Alinha os itens em coluna */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    color: #fff; /* Cor do texto branca */
+  }
+  
+  /* Estilo para sub-títulos */
+  .sub-headings {
+    max-width: 700px; /* Largura máxima de 700px */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px; /* Margem de 20px */
+    font-family: sans-serif; /* Fonte sem serifa */
+    line-height: 30px; /* Altura da linha de 30px */
+  }
+  
+  /* Estilo para o título principal */
+  h1 {
+    margin-top: 50px; /* Margem superior de 50px */
+    color: #fff; /* Cor do texto branca */
+    text-align: center; /* Centraliza o texto */
+    font-size: 4rem; /* Tamanho da fonte 4rem */
+    margin-bottom: 6rem; /* Margem inferior de 6rem */
+  }
+  
+  /* Estilo para a seta de rolagem */
+  .arrow {
+    width: 45px; /* Largura da seta */
+    height: 45px; /* Altura da seta */
+    border: 2px solid white; /* Borda branca */
+    border-radius: 50%; /* Bordas arredondadas (círculo) */
+    position: absolute; /* Posiciona a seta de forma absoluta */
+    bottom: 30px; /* Distância de 30px do fundo */
+    margin: auto; /* Centraliza horizontalmente */
+    transition: ease-in; /* Transição suave para as propriedades */
+    animation: bounce 1.5s infinite; /* Animação de bounce contínua */
+  }
+  
+  /* Estilo para a parte interna da seta */
+  .arrow:before {
+    content: ""; /* Adiciona um conteúdo vazio */
+    position: absolute; /* Posiciona de forma absoluta */
+    top: 11px; /* Distância de 11px do topo da seta */
+    left: 13px; /* Distância de 13px da esquerda da seta */
+    width: 12px; /* Largura do triângulo */
+    height: 12px; /* Altura do triângulo */
+    border-left: 2px solid #fafafa; /* Borda esquerda do triângulo */
+    border-bottom: 2px solid #fafafa; /* Borda inferior do triângulo */
+    transform: rotate(-45deg); /* Rotaciona o triângulo para formar uma seta */
+  }
+  
+  /* Animação de "bounce" para a seta */
+  @keyframes bounce {
+    0% {
+      transform: translate(0); /* Posição inicial */
+    }
+    20% {
+      transform: translateY(15px); /* Move para baixo */
+    }
+    40% {
+      transform: translate(0); /* Retorna à posição inicial */
+    }
+  }
+  
+  /* Classe para animação de fade-in */
+  .fade-in {
+    opacity: 1; /* Totalmente visível */
+    transition: 1s all ease-in; /* Transição suave ao entrar */
+  }
+  
+  /* Classe para animação de fade-out */
+  .fade-out {
+    opacity: 0; /* Totalmente invisível */
+    transition: 1s all ease-out; /* Transição suave ao sair */
+  }
+  
